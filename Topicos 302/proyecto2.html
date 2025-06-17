@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Página Galería Temática Interactiva</title>
+    <link rel="stylesheet" href="proyecto2.css">
+</head>
+<body>
+    <nav>
+    <ul class="nav-menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#filtros">Filtros </a></li>
+      <li><a href="#efectos">Efectos </a></li>
+      <li><a href="#galeria">Galería Animada</a></li>
+      <li><a href="#creditos">Créditos</a></li>
+    </ul>
+  </nav>
+
+  <section id="inicio" class="seccion">
+    <h2>Inicio</h2>
+    <div class="carrusel">
+      <div class="slide active"><img src="imagen100.jpg" alt="" /></div>
+    </div>
+  </section>
+
+  <section id="filtros" class="seccion">
+    <h2>Filtros </h2>
+    <div class="galeria-filtros">
+      <img src="imagen101.jpg" alt="" class="filtro f1" />
+      <img src="imagen102.jpg" alt="" class="filtro f2" />
+    </div>
+  </section>
+
+  <section id="efectos" class="seccion">
+    <h2>Efectos </h2>
+    <div class="galeria-super">
+      <div class="item-super">
+        <img src="imagen105.jpg" alt="" />
+        <div class="overlay"><span>Japon</span></div>
+      </div>
+      <div class="item-super">
+        <img src="imagen104.jpg" alt="" />
+        <div class="overlay"><span>Peru</span></div>
+      </div>
+      <div class="item-super">
+        <img src="imagen107.jpg" alt="" />
+        <div class="overlay"><span>Mexico</span></div>
+      </div>
+      <div class="item-super">
+        <img src="imagen108.jpg" alt="" />
+        <div class="overlay"><span>Panama</span></div>
+      </div>
+       <div class="item-super">
+        <img src="imagen115.jpg" alt="" />
+        <div class="overlay"><span>Alaska</span></div>
+      </div>
+        <div class="item-super">
+        <img src="imagen116.jpg" alt="" />
+        <div class="overlay"><span>Colombia</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="seccion">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="imagen103.jpg" alt="" class="animado" />
+      <img src="imagen106.jpg" alt="" class="animado" />
+    </div>
+  </section>
+
+  <section id="creditos" class="seccion">
+    <h2>Créditos</h2>
+    <div class="collage">
+      <img src="imagen109.jpg" alt="" class="col" />
+      <img src="imagen110.jpg" alt="" class="col" />
+      <img src="imagen111.jpg" alt="" class="col" />
+      <img src="imagen112.jpg" alt="" class="col" />
+      <img src="imagen113.jpg" alt="" class="col" />
+      <img src="imagen114.jpg" alt="" class="col" />
+    </div>
+  </section>
+
+  <script>
+    let slides = document.querySelectorAll('.slide');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>

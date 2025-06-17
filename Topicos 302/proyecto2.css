@@ -1,0 +1,180 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #b61774; 
+    background-color: #5962df;
+  }
+
+
+nav { 
+    background: #2b7f99; 
+    padding: 1rem; 
+    position: sticky; 
+    top: 0; z-index: 100;
+}
+nav .nav-menu { 
+  list-style: none; 
+  display: flex;
+   gap: 1rem; 
+   justify-content: center;
+   }
+
+nav .nav-menu a { 
+  color: hsl(284, 93%, 11%); 
+  text-decoration: none; 
+  font-weight: bold;
+ }
+
+nav .nav-menu a:hover { 
+  color: rgb(0, 255, 21);
+ }
+
+.seccion { 
+    padding: 4rem 2rem; 
+    text-align: center;
+ }
+
+/* Carrusel */
+.carrusel { 
+  width: 90%;
+   max-width: 800px; 
+   margin: 2rem auto; 
+   position: relative; 
+   overflow: hidden;
+   }
+
+.slide { 
+  position: absolute; 
+  width: 100%; 
+  opacity: 0; 
+  transition: opacity 1s ease;
+}
+
+
+.slide.active { 
+  opacity: 1; 
+  position: relative;
+  width: 800px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.slide img { 
+  width: 100%; 
+  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+ }
+
+
+/* Filtros */
+.galeria-filtros { 
+  display: flex; 
+  justify-content: center; 
+  gap: 1rem; 
+  flex-wrap: wrap; 
+}
+
+.filtro { 
+  width: 250px; 
+  height: 150px; 
+  object-fit: cover; 
+  filter: grayscale(100%); 
+  transition: filter 0.5s ease;
+ }
+
+.filtro:hover { 
+  filter: none;
+ }
+
+/* Superposición */
+.galeria-super { 
+  display: flex; 
+  justify-content: center; 
+  gap: 1rem; 
+  flex-wrap: wrap;
+ }
+ 
+.item-super { 
+  position: relative; 
+  width: 250px;
+   height: 150px; 
+   overflow: hidden; 
+  }
+
+.item-super img {
+   width: 100%; 
+   height: 100%;
+    object-fit: cover; 
+  }
+
+.overlay { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
+   height: 100%;
+   background: rgba(226, 221, 221, 0.6); 
+   color: #5f507c;
+   display: flex; align-items: center;
+  justify-content: center; 
+  opacity: 0; 
+  transition: opacity 0.4s ease;
+ }
+
+.overlay span { 
+  font-size: 1.2rem; 
+  animation: pop 0.5s ease forwards;
+ }
+
+.item-super:hover .overlay { 
+  opacity: 1;
+ }
+
+
+/* Galería animada */
+.galeria-animada { 
+  display: flex; 
+  justify-content: center; 
+  gap: 1rem; flex-wrap: wrap;
+ }
+
+.animado { 
+  width: 200px; 
+  height: 120px; 
+  object-fit: cover; 
+  opacity: 0; 
+  transform: scale(0.8); 
+  animation: fadeZoom 1s forwards;
+ }
+
+.animado:nth-child(2) { 
+  animation-delay: 0.3s; 
+}
+.animado:nth-child(3) {
+   animation-delay: 0.6s; 
+  }
+
+@keyframes fadeZoom {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Animación pop overlay */
+@keyframes rotate {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+
+
+
+
+
+
+
+
