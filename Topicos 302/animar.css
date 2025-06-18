@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    margin: 0;
+    background-color: #5a045a;
+}
+
+.cuadrado-animado {
+    width: 100px;
+    height: 100px;
+    background: steelblue;
+    background-color: rgb(68, 255, 30); /* Color inicial del cuadrado */
+    position: relative; /* Necesario para animar 'left' o 'transform' */
+    /* Aplicamos la animación */
+    animation-name: moverYcambiarColor; /* El nombre de nuestra animación */
+    animation-duration: 5s; /* Duración de la animación (4 segundos) */
+    animation-iteration-count: infinite; /* Cuántas veces se repetirá (infinitas veces) */
+    animation-timing-function: ease-in-out; /* Velocidad de la animación (empieza lento, acelera, termina lento) */
+    animation-delay: 2s;
+}
+
+@keyframes moverYcambiarColor {
+    0% {
+        background-color: rgb(30, 229, 255); /* Color inicial */
+        transform: translateX(0); /* Posición inicial: no se mueve horizontalmente */
+        border-radius: 0%;
+    }
+    50% {
+        background-color: rgb(68, 0, 255); /* A la mitad de la animación, cambia a naranja */
+        transform: translateX(150px); /* Se mueve 150px a la derecha */
+        border-radius: 50%;
+    }
+    
+    100% {
+        background-color: rgb(255, 30, 218); /* Al final, vuelve al color inicial */
+        transform: translateX(0); /* Vuelve a la posición inicial */
+        border-radius: 100%;
+    }
+}

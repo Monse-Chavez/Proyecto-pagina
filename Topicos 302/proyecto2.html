@@ -1,95 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Página Galería Temática Interactiva</title>
-    <link rel="stylesheet" href="proyecto2.css">
-</head>
-<body>
-    <nav>
-    <ul class="nav-menu">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#filtros">Filtros </a></li>
-      <li><a href="#efectos">Efectos </a></li>
-      <li><a href="#galeria">Galería Animada</a></li>
-      <li><a href="#creditos">Créditos</a></li>
-    </ul>
-  </nav>
-
-  <section id="inicio" class="seccion">
-    <h2>Inicio</h2>
-    <div class="carrusel">
-      <div class="slide active"><img src="imagen100.jpg" alt="" /></div>
-    </div>
-  </section>
-
-  <section id="filtros" class="seccion">
-    <h2>Filtros </h2>
-    <div class="galeria-filtros">
-      <img src="imagen101.jpg" alt="" class="filtro f1" />
-      <img src="imagen102.jpg" alt="" class="filtro f2" />
-    </div>
-  </section>
-
-  <section id="efectos" class="seccion">
-    <h2>Efectos </h2>
-    <div class="galeria-super">
-      <div class="item-super">
-        <img src="imagen105.jpg" alt="" />
-        <div class="overlay"><span>Japon</span></div>
-      </div>
-      <div class="item-super">
-        <img src="imagen104.jpg" alt="" />
-        <div class="overlay"><span>Peru</span></div>
-      </div>
-      <div class="item-super">
-        <img src="imagen107.jpg" alt="" />
-        <div class="overlay"><span>Mexico</span></div>
-      </div>
-      <div class="item-super">
-        <img src="imagen108.jpg" alt="" />
-        <div class="overlay"><span>Panama</span></div>
-      </div>
-       <div class="item-super">
-        <img src="imagen115.jpg" alt="" />
-        <div class="overlay"><span>Alaska</span></div>
-      </div>
-        <div class="item-super">
-        <img src="imagen116.jpg" alt="" />
-        <div class="overlay"><span>Colombia</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="galeria" class="seccion">
-    <h2>Galería</h2>
-    <div class="galeria">
-      <img src="imagen103.jpg" alt="" class="animado" />
-      <img src="imagen106.jpg" alt="" class="animado" />
-    </div>
-  </section>
-
-  <section id="creditos" class="seccion">
-    <h2>Créditos</h2>
-    <div class="collage">
-      <img src="imagen109.jpg" alt="" class="col" />
-      <img src="imagen110.jpg" alt="" class="col" />
-      <img src="imagen111.jpg" alt="" class="col" />
-      <img src="imagen112.jpg" alt="" class="col" />
-      <img src="imagen113.jpg" alt="" class="col" />
-      <img src="imagen114.jpg" alt="" class="col" />
-    </div>
-  </section>
-
-  <script>
-    let slides = document.querySelectorAll('.slide');
-    let current = 0;
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 3000);
-  </script>
-</body>
-</html>
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Página Galería Temática </title>  
+    <link rel="stylesheet" href="proyecto2.css">  
+    <link rel="stylesheet" href="movimiento.css">  
+    <style></style>  
+</head>      
+<body>  
+    <nav class="navbar-basic">  
+        <ul class="nav-list-basic">  
+            <li><a href="#inicio">Inicio</a></li>  
+            <li><a href="#filtros">Filtros</a></li>  
+            <li><a href="#efectos">Efectos</a></li>  
+            <li><a href="#galeria">Galeria Animada</a></li>  
+            <li><a href="#creditos">Créditos</a></li>  
+        </ul>  
+    </nav>    
+    <section id="inicio" class="contenido">  
+        <div class="slider-container">  
+            <div class="slider">  
+                <div class="tarjetas"><img src="imagen100.jpg" alt=""></div>  
+                <div class="tarjetas"><img src="imagen101.jpg" alt=""></div>  
+                <div class="tarjetas"><img src="imagen102.jpg" alt=""></div>  
+                <div class="tarjetas"><img src="imagen103.jpg" alt=""></div> 
+            </div>  
+        </div>  
+        <div class="bienvenida">  
+            <h1>Hola, bienvenidos a nuestra galeria de ciudades.</h1>   
+        </div>  
+    </section>  
+    <section id="filtros" class="contenido filtros-section">  
+        <div class="filtro-galeria">  
+            <div class="filtro-item filtro1"><img src="imagen104.jpg" alt="Filtro 1"></div>  
+            <div class="filtro-item filtro2"><img src="imagen105.jpg" alt="Filtro 2"></div>  
+            <div class="filtro-item filtro3"><img src="imagen107.jpg" alt="Filtro 3"></div>  
+            <div class="filtro-item filtro4"><img src="imagen123.jpg" alt="Filtro 4"></div>  
+        </div>  
+ </section>  
+    <section id="efectos" class="contenido efectos-section">  
+        <div class="efectos-galeria">  
+            <div class="efecto-card"><img src="imagen109.jpg" alt=" tradición y modernidad">  
+                <span class="overlay">Tokio</span> 
+            </div>  
+            <div class="efecto-card"><img src="imagen110.jpg" alt="diversidad cultural">  
+                <span class="overlay">Peru</span>  
+            </div>  
+            <div class="efecto-card"><img src="imagen111.jpg" alt="diversidad cultural y natural">  
+                <span class="overlay">Panama</span>  
+            </div>  
+            <div class="efecto-card"><img src="imagen112.jpg" alt="belleza y su actitud autodestructiva">  
+                <span class="overlay">Alaska</span>  
+            </div>  
+        </div>  
+    </section>  
+ <section id="galeria" class="contenido galeria-section">  
+        <div class="galeria-grid">  
+            <div class="galeria-item efecto-zoom filtro-1"><img src="imagen113.jpg" alt="Obra 1"></div>  
+            <div class="galeria-item efecto-lado filtro-2"><img src="imagen114.jpg" alt="Obra 2"></div>  
+            <div class="galeria-item efecto-giro filtro-3"><img src="imagen115.jpg" alt="Obra 3"></div>  
+            <div class="galeria-item efecto-zoom filtro-4"><img src="imagen116.jpg" alt="Obra 4"></div>  
+            <div class="galeria-item efecto-lado filtro-5"><img src="imagen117.jpg" alt="Obra 5"></div>  
+            <div class="galeria-item efecto-giro filtro-6"><img src="imagen118.jpg" alt="Obra 6"></div>  
+            <div class="galeria-item efecto-zoom filtro-7"><img src="imagen119jpg.jpg" alt="Obra 7"></div>  
+            <div class="galeria-item efecto-lado filtro-8"><img src="imagen120.jpg" alt="Obra 8"></div>  
+            <div class="galeria-item efecto-giro filtro-9"><img src="imagen121.jpg" alt="Obra 9"></div>  
+            <div class="galeria-item efecto-zoom filtro-10"><img src="imagen122.jpg" alt="Obra 10"></div>  
+        </div>  
+    </section>  
+<section id="creditos" class="contenido creditos-section">  
+        <div class="creditos-container">  
+            <h2 class="creditos-title"></h2>  
+            <p class="creditos-linea">Proyecto pagina de Galeria realizado por <strong>Monserrat Chavez Jimenez</strong></p>  
+            <p class="creditos-linea">Inspirado en <strong>lo bonito que son las ciudades, en ello nos inspira diferentes sensaciones, y conocer diferentes lugares.</strong></p>    
+            <p class="creditos-linea">Universidad Politécnica de Atlacomulco</p>  
+            <div class="creditos-firma">Gracias por visitar nuestra galería</div>  
+            <p class="creditos-fuente">Estas fotografias de ciudades: <a href="_blank">Pinterest</a>.</p>  
+        </div>  
+    </section>  
+</body>  
+</html

@@ -1,0 +1,31 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(6, minmax(50px, 1fr));
+    grid-template-rows: repeat(6, minmax(50px, 1fr));
+    gap: 2px;
+}
+
+.uno{
+    background-color: aqua;
+    grid-column: 1/4;
+    grid-row: 1/4;
+
+}
+.dos{
+    background-color: green;
+    grid-column: 4/7;
+    grid-row: 1/4;
+    
+}
+.tres{
+    background-color: pink;
+    grid-column: 1/4;
+    grid-row: 4/7;
+    
+}
+.cuatro{
+    background-color: aqua;
+    grid-column: 4/7;
+    grid-row: 4/7;
+    
+}

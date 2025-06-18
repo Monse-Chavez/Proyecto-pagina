@@ -1,0 +1,66 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(6,1fr);
+    }
+
+   .Inicio{
+    background-color: blueviolet;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-rows-start: 1;
+    grid-row-end: 2;
+    border-radius: 5px;
+}
+.Busqueda {
+    background-color: green;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+   
+}
+.Imagenes{
+    background-color:blue;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 80px;
+    padding: 20px;
+    position: relative;
+    top: -100px;
+    
+}
+.Videos{
+    background-color: orangered;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 80px;
+    padding: 20px;
+    gap: 10px;
+    position: relative;
+    top: -100px;
+}
+.Contacto{
+    background-color: pink;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 80px;
+    padding: 10px;
+    position: relative;
+    top: -100px;
+}

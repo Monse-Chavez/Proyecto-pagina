@@ -1,0 +1,35 @@
+
+
+.uno{
+    color: aliceblue;
+    padding: 30px;
+    border-top: 800px;
+    background-color: black;
+    right: 20px;
+    left: 50px;
+    
+}
+.dos{
+    color: pink;
+    border-top: 5px;
+    background-color: blue;
+    border-top: 10px solid pink;
+    border-right: 5px solid orange;
+    border-bottom: 5px solid yellow;
+    border-left: 5px solid purple;
+    margin-top: 100px;
+    margin-left: 80px;
+}
+.tres{
+    
+    border-top: 15px;
+    background-color: orangered;
+    border-top: 5px ;
+    border-right: 5px ;
+    border-bottom: 5px;
+    border-left: 5px;
+    margin-top: 20px;
+    margin-left: 100px;
+    
+
+}
